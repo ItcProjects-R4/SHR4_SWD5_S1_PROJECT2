@@ -1,0 +1,63 @@
+@model Clinic_System.CancelAppointmentDto
+@{
+    Layout = "_PatientLayout";
+    ViewData["Title"] = "Cancel Appointment";
+}
+
+<div class="max-w-lg mx-auto space-y-6">
+
+    <div class="bg-base-100 rounded-2xl border border-base-200/60 shadow-sm overflow-hidden">
+        <div class="bg-error/10 border-b border-error/20 px-5 py-4 flex items-center gap-2">
+            <span class="text-error text-lg">✕</span>
+            <h1 class="text-lg font-bold text-error">Cancel Appointment</h1>
+        </div>
+
+        <div class="p-5 space-y-4">
+            <div class="bg-warning/10 border border-warning/20 rounded-xl p-3 text-sm flex gap-2">
+                <span>⚠️</span>
+                <div>
+                    <strong>Are you sure?</strong> This action cannot be undone.
+                    Appointments can only be cancelled at least <strong>2 hours</strong> before the scheduled time.
+                </div>
+            </div>
+
+            @if (TempData["Error"] != null)
+            {
+                <div class="bg-error/10 border border-error/20 text-error rounded-xl p-3 text-sm">
+                    @TempData["Error"]
+                </div>
+            }
+
+            <form asp-action="CancelAppointment" method="post" class="space-y-4">
+                @Html.AntiForgeryToken()
+                <input type="hidden" asp-for="AppointmentId" />
+
+                <div>
+                    <label asp-for="Reason" class="text-sm font-semibold block mb-1">
+                        Reason for Cancellation <span class="text-error">*</span>
+                    </label>
+                    <textarea asp-for="Reason"
+                              class="textarea textarea-bordered w-full rounded-xl"
+                              rows="4"
+                              placeholder="Please describe why you are cancelling this appointment (min. 10 characters)…"></textarea>
+                    <span asp-validation-for="Reason" class="text-error text-xs"></span>
+                </div>
+
+                <div class="flex gap-2 pt-2">
+                    <button type="submit" class="btn btn-error rounded-full px-5 shadow-sm shadow-error/20">
+                        Confirm Cancellation
+                    </button>
+                    <a asp-action="Dashboard" class="btn btn-ghost rounded-full px-5">
+                        Go Back
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
