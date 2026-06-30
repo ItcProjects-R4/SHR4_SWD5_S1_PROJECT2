@@ -1,5 +1,5 @@
 <div align="center">
-
+![Clinic Flow Banner](./clinicflow_banner_2.svg)
 
   
 # 🏥 Clinic Flow
