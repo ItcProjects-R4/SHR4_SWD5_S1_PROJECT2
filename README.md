@@ -3,10 +3,6 @@
 ![Clinic Flow Banner](./clinicflow_banner_2.svg)
 
   ---
-  
-# 🏥 Clinic Flow
-
-### *Your Health, Our Priority*
 
 
 A smart, all-in-one clinic management platform that brings patients, doctors, and administrators together in a single place.
