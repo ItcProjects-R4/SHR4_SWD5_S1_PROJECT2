@@ -1,8 +1,10 @@
 <div align="center">
+
+
   
 # 🏥 Clinic Flow
 
-### *Your Health, Our Priority*![Uploading SHR4_SWD5_S1_PROJECT2_banner.svg…]()
+### *Your Health, Our Priority*
 
 
 A smart, all-in-one clinic management platform that brings patients, doctors, and administrators together in a single place.
