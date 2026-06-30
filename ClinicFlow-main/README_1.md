@@ -1,10 +1,12 @@
+<div align="center">
+
 # 🏥 Clinic Flow
 
-> **Your Health, Our Priority**
+### *Your Health, Our Priority*
 
 A smart, all-in-one clinic management platform that brings patients, doctors, and administrators together in a single place.
 
-<p align="left">
+<p>
   <img src="https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt=".NET" />
   <img src="https://img.shields.io/badge/ASP.NET%20Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt="ASP.NET Core" />
   <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C#" />
@@ -18,6 +20,14 @@ A smart, all-in-one clinic management platform that brings patients, doctors, an
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
 </p>
 
+<p>
+  <a href="https://canva.link/gh7krkksr4u5bep"><img src="https://img.shields.io/badge/🎤_Presentation-FF6B6B?style=for-the-badge" alt="Presentation" /></a>
+  <a href="https://drive.google.com/file/d/1csEcMRy4ylcjfsd7eTGx6p3zVzF4tSz6/view?usp=drive_link"><img src="https://img.shields.io/badge/📄_Documentation-4285F4?style=for-the-badge" alt="Documentation" /></a>
+  <a href="https://drive.google.com/file/d/1zj_gs1uYiIjwUBXCNXQh0aqgoUQZgZsk/view?usp=drive_link"><img src="https://img.shields.io/badge/🎬_Demo_Video-34A853?style=for-the-badge" alt="Demo" /></a>
+</p>
+
+</div>
+
 ---
 
 ## 📌 Table of Contents
@@ -25,17 +35,18 @@ A smart, all-in-one clinic management platform that brings patients, doctors, an
 1. [About the Project](#-about-the-project)
 2. [The Problem](#-the-problem)
 3. [Our Solution](#-our-solution)
-4. [System Workflow](#-system-workflow)
-5. [Architecture (N-Layer)](#-architecture-n-layer)
-6. [Tech Stack](#-tech-stack)
-7. [Security & Authentication](#-security--authentication)
-8. [Modules](#-modules)
-9. [Core Entities](#-core-entities)
-10. [External Integrations](#-external-integrations)
-11. [Key Features](#-key-features)
-12. [Screenshots](#-screenshots)
+4. [Screenshots](#-screenshots)
+5. [System Workflow](#-system-workflow)
+6. [Architecture (N-Layer)](#-architecture-n-layer)
+7. [Tech Stack](#-tech-stack)
+8. [Security & Authentication](#-security--authentication)
+9. [Modules](#-modules)
+10. [Core Entities](#-core-entities)
+11. [External Integrations](#-external-integrations)
+12. [Key Features](#-key-features)
 13. [Getting Started](#-getting-started)
-14. [Team](#-team)
+14. [Resources](#-resources)
+15. [Team](#-team)
 
 ---
 
@@ -57,6 +68,33 @@ Clinic Flow brings patients and clinic staff onto one unified platform:
 
 - **Patients** can create an account, browse departments and doctors, book and pay for appointments, and cancel online.
 - **Admins** get a complete view of everything happening in the clinic — appointments, requests, and refunds — in one place.
+
+---
+
+## 📸 Screenshots
+
+<div align="center">
+
+<table>
+  <tr>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/76042332-5fe9-4fec-8bbf-30f73a2fd137" alt="Clinic Flow screenshot 1" /></td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/07bfab15-c491-424c-b13b-58eac224695a" alt="Clinic Flow screenshot 2" /></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/720f56a1-c9b0-4ebf-b989-6dea6817a037" alt="Clinic Flow screenshot 3" /></td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/4b614d7e-f768-4727-b0e4-e902876164a4" alt="Clinic Flow screenshot 4" /></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/55b37fce-fb75-4084-bdb4-11f519d2dac8" alt="Clinic Flow screenshot 5" /></td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/d826b94a-dfbf-4214-84d7-ebe2860bfbd4" alt="Clinic Flow screenshot 6" /></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/752e643c-e647-4cb2-95ae-f497a19d505e" alt="Clinic Flow screenshot 7" /></td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/81a7e045-bf41-423b-a5e8-b2347b91a310" alt="Clinic Flow screenshot 8" /></td>
+  </tr>
+</table>
+
+</div>
 
 ---
 
@@ -83,6 +121,25 @@ Clinic Flow brings patients and clinic staff onto one unified platform:
 ## 🏗️ Architecture (N-Layer)
 
 The project is divided into **three fully independent layers**, each with a single responsibility (Separation of Concerns):
+
+```
+Clinic Flow
+├── Clinic_System.DAL          → Data Access Layer
+│   ├── Entities, Enums, Constants
+│   ├── Data (DbContext) & Migrations
+│   └── Repositories (IGenericRepository<T>, IUnitOfWork)
+│
+├── Clinic_System.BLL          → Business Logic Layer
+│   ├── Services (IAppointmentService, IStripePaymentService, ...)
+│   ├── DTOs
+│   └── Helpers
+│
+└── custom_LogIn                → Presentation Layer
+    ├── Controllers
+    ├── Views (Razor)
+    ├── ViewModels
+    └── Templates (email templates)
+```
 
 ### 🗄️ Data Access Layer (DAL)
 - Responsible solely for interacting with the database.
@@ -189,29 +246,22 @@ Every entity inherits from `BaseEntity` to share common properties such as `Id` 
 
 ---
 
-## 📸 Screenshots
-
-> *(Taken from the project presentation)*
-
-- Home page: "Your Health, Our Priority"
-- Login page with "Continue with Google" option
-- Medical departments page (Cardiology, Dermatology, Neurology, Orthopedics, Pediatrics, Dentistry, ENT, Ophthalmology)
-- "Meet Our Specialists" page with search filters (doctor name, specialty, max price)
-- Per-doctor booking and payment page
-- Patient / Doctor / Admin dashboards
-
-> *[Add actual screenshots here if available]*
-
----
-
 ## 🚀 Getting Started
+
+### Prerequisites
+- [.NET SDK](https://dotnet.microsoft.com/download) (8.0 or later)
+- [SQL Server](https://www.microsoft.com/sql-server) (LocalDB or full instance)
+- A [Stripe](https://stripe.com) account (test API keys)
+- A Gmail account with an App Password for SMTP
+
+### Installation
 
 ```bash
 # 1. Clone the repository
-git clone [repo-url]
+git clone https://github.com/ItcProjects-R4/SHR4_SWD5_S1_PROJECT4.git
 
 # 2. Navigate to the project folder
-cd Clinic_Flow
+cd SHR4_SWD5_S1_PROJECT4
 
 # 3. Restore packages
 dotnet restore
@@ -225,7 +275,17 @@ dotnet ef database update --project Clinic_System.DAL
 dotnet run --project custom_LogIn
 ```
 
-> *[Add any additional setup instructions here]*
+The app will be available at `https://localhost:{port}` once it starts.
+
+---
+
+## 📚 Resources
+
+| Resource | Link |
+|---|---|
+| 🎤 Presentation | [View on Canva](https://canva.link/gh7krkksr4u5bep) |
+| 📄 Documentation | [View on Google Drive](https://drive.google.com/file/d/1csEcMRy4ylcjfsd7eTGx6p3zVzF4tSz6/view?usp=drive_link) |
+| 🎬 Demo Video | [View on Google Drive](https://drive.google.com/file/d/1zj_gs1uYiIjwUBXCNXQh0aqgoUQZgZsk/view?usp=drive_link) |
 
 ---
 
@@ -245,4 +305,8 @@ dotnet run --project custom_LogIn
 - Dr. Mahmoud Raslan
 - Eng. Ibrahim Abdelhamid
 
+<div align="center">
+
 **ITC Colleague — Ministry of Communications and Information Technology | Egypt's Digital Pioneers Initiative**
+
+</div>
