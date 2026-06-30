@@ -1,8 +1,98 @@
 <div align="center">
+<svg width="900" height="230" viewBox="0 0 900 230" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDF6EC"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="blob1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A5C"/>
+      <stop offset="100%" stop-color="#FFB199"/>
+    </linearGradient>
+    <linearGradient id="blob2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2EC4B6"/>
+      <stop offset="100%" stop-color="#8FE3D9"/>
+    </linearGradient>
+    <clipPath id="clip"><rect width="900" height="230" rx="16"/></clipPath>
+  </defs>
 
+  <!-- Background -->
+  <rect width="900" height="230" fill="url(#bgG)" rx="16"/>
+  <rect width="900" height="230" rx="16" fill="none" stroke="#EFE6D8" stroke-width="1.5"/>
+
+  <g clip-path="url(#clip)">
+    <!-- Soft decorative blobs -->
+    <circle cx="40" cy="200" r="120" fill="url(#blob1)" opacity="0.14"/>
+    <circle cx="860" cy="20" r="140" fill="url(#blob2)" opacity="0.14"/>
+    <circle cx="850" cy="210" r="60" fill="#2EC4B6" opacity="0.08"/>
+
+    <!-- Dotted accent pattern -->
+    <g fill="#2EC4B6" opacity="0.25">
+      <circle cx="40" cy="40" r="2.5"/><circle cx="60" cy="40" r="2.5"/><circle cx="80" cy="40" r="2.5"/>
+      <circle cx="40" cy="58" r="2.5"/><circle cx="60" cy="58" r="2.5"/>
+    </g>
+    <g fill="#FF7A5C" opacity="0.25">
+      <circle cx="820" cy="180" r="2.5"/><circle cx="840" cy="180" r="2.5"/>
+      <circle cx="820" cy="198" r="2.5"/><circle cx="840" cy="198" r="2.5"/><circle cx="860" cy="198" r="2.5"/>
+    </g>
+  </g>
+
+  <!-- Calendar icon card, left -->
+  <g transform="translate(95,115)">
+    <rect x="-32" y="-32" width="64" height="64" rx="16" fill="#FFFFFF" stroke="#FFD9CC" stroke-width="2"/>
+    <rect x="-18" y="-14" width="36" height="28" rx="4" fill="none" stroke="#FF7A5C" stroke-width="3"/>
+    <line x1="-18" y1="-6" x2="18" y2="-6" stroke="#FF7A5C" stroke-width="3"/>
+    <line x1="-10" y1="-20" x2="-10" y2="-10" stroke="#FF7A5C" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-20" x2="10" y2="-10" stroke="#FF7A5C" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="-7" cy="4" r="2.4" fill="#FF7A5C"/>
+    <circle cx="4" cy="4" r="2.4" fill="#FF7A5C"/>
+    <animateTransform attributeName="transform" type="translate" values="95,115;95,108;95,115" dur="3.5s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <!-- Heart/pulse icon card, right -->
+  <g transform="translate(805,115)">
+    <rect x="-32" y="-32" width="64" height="64" rx="16" fill="#FFFFFF" stroke="#BCEFE7" stroke-width="2"/>
+    <path d="M-16,-2 C-16,-12 -2,-12 0,-2 C2,-12 16,-12 16,-2 C16,8 0,18 0,18 C0,18 -16,8 -16,-2 Z"
+      fill="none" stroke="#2EC4B6" stroke-width="3" stroke-linejoin="round"/>
+    <animateTransform attributeName="transform" type="translate" values="805,115;805,108;805,115" dur="3.5s" begin="1.2s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <!-- Eyebrow tag -->
+  <g transform="translate(450,52)">
+    <rect x="-92" y="-15" width="184" height="28" rx="14" fill="#2EC4B6" opacity="0.12"/>
+    <text x="0" y="5" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700"
+      text-anchor="middle" fill="#1B8A7E" letter-spacing="2">SMART CLINIC SYSTEM</text>
+  </g>
+
+  <!-- Main title -->
+  <text x="450" y="118" font-family="Georgia, 'Times New Roman', serif" font-size="56" font-weight="700"
+    text-anchor="middle" fill="#1F2A37">
+    Clinic<tspan fill="#FF7A5C"> Flow</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="450" y="156" font-family="Arial, Helvetica, sans-serif" font-size="16"
+    text-anchor="middle" fill="#6B7280">Your Health, Our Priority</text>
+
+  <!-- Divider dots -->
+  <g fill="#D1D5DB">
+    <circle cx="390" cy="180" r="2"/>
+    <circle cx="450" cy="180" r="2"/>
+    <circle cx="510" cy="180" r="2"/>
+  </g>
+
+  <!-- Caption -->
+  <text x="450" y="204" font-family="Arial, Helvetica, sans-serif" font-size="11"
+    text-anchor="middle" fill="#9CA3AF" letter-spacing="1.5">
+    Patients · Doctors · Admins — All in One Place
+  </text>
+</svg>
+
+---
 # 🏥 Clinic Flow
 
-### *Your Health, Our Priority*
+### *Your Health, Our Priority*![Uploading SHR4_SWD5_S1_PROJECT2_banner.svg…]()
+
 
 A smart, all-in-one clinic management platform that brings patients, doctors, and administrators together in a single place.
 
