@@ -284,7 +284,7 @@ The app will be available at `https://localhost:{port}` once it starts.
 
 | Resource | Link |
 |---|---|
-| 🎤 Presentation | [View on Google Drive](https://canva.link/gh7krkksr4u5bep](https://drive.google.com/file/d/1KR0ajJdEh33W6ekrzK8Z6DeKLvpvhS7s/view?usp=drive_link)) |
+| 🎤 Presentation | [View on Google Drive](https://drive.google.com/file/d/1KR0ajJdEh33W6ekrzK8Z6DeKLvpvhS7s/view?usp=drive_link) |
 | 📄 Documentation | [View on Google Drive](https://drive.google.com/file/d/1csEcMRy4ylcjfsd7eTGx6p3zVzF4tSz6/view?usp=drive_link) |
 | 🎬 Demo Video | [View on Google Drive](https://drive.google.com/file/d/1zj_gs1uYiIjwUBXCNXQh0aqgoUQZgZsk/view?usp=drive_link) |
 
